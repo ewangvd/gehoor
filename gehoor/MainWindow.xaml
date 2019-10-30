@@ -27,5 +27,7 @@
         <TextBlock x:Name="devices_txt" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="16" Width="40"><Run Text="D"/><Run Text="evices"/></TextBlock>
         <TextBlock x:Name="volume_txt" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Volume" VerticalAlignment="Top" Margin="615,10,0,0" Height="16" Width="67"/>
         <ProgressBar x:Name="volume_bar" HorizontalAlignment="Left" Height="12" Margin="615,88,0,0" VerticalAlignment="Top" Width="169" ValueChanged="volume_bar_ValueChanged" Background="#FF259C00"/>
+        <TextBox HorizontalAlignment="Left" Height="25" Margin="615,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169"/>
+        <TextBlock HorizontalAlignment="Left" Margin="615,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Time last measurement"/><LineBreak/><Run/></TextBlock>
     </Grid>
 </Window>
