@@ -6,7 +6,14 @@
         xmlns:local="clr-namespace:gehoor"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Foreground="Black" FontFamily="Arial" Background="White">
-    <Grid RenderTransformOrigin="0.494,0.52" Margin="0,0,3.6,0" Background="White">
+    <Grid RenderTransformOrigin="0.494,0.52" Margin="0,0,3.6,0">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="#FFCDEAFF" Offset="1"/>
+                <GradientStop Color="White"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition Width="0*"/>
@@ -19,9 +26,6 @@
         </ComboBox>
         <TextBlock x:Name="devices_txt" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="16" Width="40"><Run Text="D"/><Run Text="evices"/></TextBlock>
         <TextBlock x:Name="volume_txt" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Volume" VerticalAlignment="Top" Margin="615,10,0,0" Height="16" Width="67"/>
-        <ProgressBar x:Name="volume_bar" HorizontalAlignment="Left" Height="12" Margin="615,88,0,0" VerticalAlignment="Top" Width="169"/>
-        <TextBox x:Name="hz" HorizontalAlignment="Left" Height="62" Margin="615,119,0,0" TextWrapping="Wrap" Text="___Hz" VerticalAlignment="Top" Width="169" FontSize="50" FontFamily="Arial" RenderTransformOrigin="0.495,0.529" IsEnabled="False"/>
-        <TextBlock x:Name="pitch_txt" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Pitch" VerticalAlignment="Top" Margin="615,103,0,0" Height="16" Width="40"/>
-        <ProgressBar x:Name="pitch_bar" HorizontalAlignment="Left" Height="12" Margin="615,181,0,0" VerticalAlignment="Top" Width="169"/>
+        <ProgressBar x:Name="volume_bar" HorizontalAlignment="Left" Height="12" Margin="615,88,0,0" VerticalAlignment="Top" Width="169" ValueChanged="volume_bar_ValueChanged" Background="#FF259C00"/>
     </Grid>
 </Window>
